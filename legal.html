@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Legal Policies — Bnzara</title>
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@600&family=DM+Sans:wght@300;400;500&display=swap" rel="stylesheet">
+    <style>
+        *{box-sizing:border-box;margin:0;padding:0}
+        :root{--teal:#027368;--teal-dark:#015a52;--teal-light:#e6f4f2;--text:#1a1a1a;--muted:#666;--border:#e8e8e8;--bg:#f7f9f8}
+        body{font-family:'DM Sans',sans-serif;background:var(--bg);color:var(--text);line-height:1.7}
+        header{background:var(--teal);padding:18px 24px;box-shadow:0 2px 20px rgba(2,115,104,0.3)}
+        .brand{font-family:'Playfair Display',serif;font-size:26px;color:#fff}
+        .brand span{display:block;font-family:'DM Sans',sans-serif;font-size:11px;font-weight:300;color:rgba(255,255,255,0.7);letter-spacing:0.15em;text-transform:uppercase}
+        main{max-width:800px;margin:0 auto;padding:32px 20px 80px}
+        .card{background:#fff;border-radius:16px;overflow:hidden;box-shadow:0 1px 6px rgba(0,0,0,0.06);margin-bottom:20px}
+        .card-header{display:flex;align-items:center;justify-content:space-between;padding:18px 24px;border-bottom:1px solid var(--border);cursor:pointer;background:#fff;user-select:none}
+        .card-header-left{display:flex;align-items:center;gap:12px}
+        .icon{width:40px;height:40px;border-radius:10px;background:var(--teal-light);display:flex;align-items:center;justify-content:center;font-size:20px;flex-shrink:0}
+        .card-header h2{font-family:'Playfair Display',serif;font-size:18px;color:var(--teal-dark)}
+        .arrow{font-size:18px;color:#999;transition:transform 0.2s}
+        .arrow.open{transform:rotate(180deg)}
+        .card-body{padding:24px;display:none}
+        .card-body.open{display:block}
+        h3{font-size:12px;font-weight:600;color:var(--text);margin:18px 0 8px;text-transform:uppercase;letter-spacing:0.06em}
+        h3:first-child{margin-top:0}
+        p{color:var(--muted);font-size:14.5px;margin-bottom:12px}
+        ul{list-style:none;padding:0;margin-bottom:12px}
+        ul li{padding:8px 0 8px 20px;position:relative;color:var(--muted);font-size:14.5px;border-bottom:1px solid #f5f5f5}
+        ul li:last-child{border-bottom:none}
+        ul li::before{content:'';position:absolute;left:0;top:17px;width:7px;height:7px;border-radius:50%;background:var(--teal)}
+        .updated{text-align:center;font-size:12px;color:#aaa;margin-top:24px}
+        footer{background:var(--teal-dark);color:rgba(255,255,255,0.6);text-align:center;padding:20px;font-size:13px}
+        footer a{color:rgba(255,255,255,0.85);text-decoration:none}
+        @media(max-width:600px){.card-body{padding:16px}}
+    </style>
+</head>
+<body>
+<header>
+    <div class="brand">Bnzara <span>Legal Policies</span></div>
+</header>
+<main>
+
+    <!-- Return -->
+    <div class="card">
+        <div class="card-header" onclick="toggle(this)">
+            <div class="card-header-left">
+                <div class="icon">↩️</div>
+                <h2>Return Policy</h2>
+            </div>
+            <span class="arrow">▼</span>
+        </div>
+        <div class="card-body">
+            <ul>
+                <li>Items can be returned within <strong>7 days</strong> of delivery</li>
+                <li>Product must be unused and in original packaging with all tags intact</li>
+                <li>Damaged or defective items are eligible for immediate return or replacement</li>
+                <li>Refund will be processed within <strong>5–7 business days</strong> after return is received</li>
+                <li>To initiate a return, contact our support team with your Order ID</li>
+                <li>Items marked as non-returnable on the product page are not eligible for return</li>
+            </ul>
+        </div>
+    </div>
+
+    <!-- Shipping -->
+    <div class="card">
+        <div class="card-header" onclick="toggle(this)">
+            <div class="card-header-left">
+                <div class="icon">🚚</div>
+                <h2>Shipping Policy</h2>
+            </div>
+            <span class="arrow">▼</span>
+        </div>
+        <div class="card-body">
+            <ul>
+                <li>Standard delivery: <strong>3–7 business days</strong></li>
+                <li>Express delivery: <strong>1–2 business days</strong> (available in select cities)</li>
+                <li>Free shipping on orders above <strong>₹499</strong></li>
+                <li>Shipping charge of <strong>₹49</strong> applies on orders below ₹499</li>
+                <li>You will receive a tracking link via SMS/email once your order is shipped</li>
+                <li>Delivery to remote areas may take additional 2–3 days</li>
+            </ul>
+        </div>
+    </div>
+
+    <!-- Cancellation -->
+    <div class="card">
+        <div class="card-header" onclick="toggle(this)">
+            <div class="card-header-left">
+                <div class="icon">❌</div>
+                <h2>Cancellation Policy</h2>
+            </div>
+            <span class="arrow">▼</span>
+        </div>
+        <div class="card-body">
+            <ul>
+                <li>Orders can be cancelled <strong>before they are shipped</strong></li>
+                <li>Once an order is shipped, cancellation is not possible</li>
+                <li>To cancel, go to <strong>My Orders</strong> and tap Cancel Order</li>
+                <li>Refund for cancelled orders will be processed within <strong>3–5 business days</strong></li>
+                <li>Prepaid orders will be refunded to the original payment method</li>
+                <li>Cash on Delivery orders have no refund applicable on cancellation</li>
+            </ul>
+        </div>
+    </div>
+
+    <p class="updated">Last updated: January 2025 · support@bnzara.com</p>
+</main>
+<footer>© 2025 Bnzara. All rights reserved. · <a href="mailto:support@bnzara.com">support@bnzara.com</a></footer>
+<script>
+    function toggle(header) {
+        const body  = header.nextElementSibling;
+        const arrow = header.querySelector('.arrow');
+        body.classList.toggle('open');
+        arrow.classList.toggle('open');
+    }
+</script>
+</body>
+</html>
