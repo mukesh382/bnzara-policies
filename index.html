@@ -1,0 +1,448 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Bnzara — Policies</title>
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@600;700&family=DM+Sans:wght@300;400;500&display=swap" rel="stylesheet">
+    <style>
+        *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+
+        :root {
+            --teal:      #027368;
+            --teal-dark: #015a52;
+            --teal-light:#e6f4f2;
+            --text:      #1a1a1a;
+            --muted:     #666;
+            --border:    #e8e8e8;
+            --bg:        #f7f9f8;
+            --white:     #ffffff;
+        }
+
+        html { scroll-behavior: smooth; }
+
+        body {
+            font-family: 'DM Sans', sans-serif;
+            background: var(--bg);
+            color: var(--text);
+            line-height: 1.7;
+        }
+
+        /* ── HEADER ── */
+        header {
+            background: var(--teal);
+            padding: 0;
+            position: sticky;
+            top: 0;
+            z-index: 100;
+            box-shadow: 0 2px 20px rgba(2,115,104,0.3);
+        }
+
+        .header-inner {
+            max-width: 860px;
+            margin: 0 auto;
+            padding: 18px 24px;
+            display: flex;
+            align-items: center;
+            gap: 16px;
+        }
+
+        .brand {
+            font-family: 'Playfair Display', serif;
+            font-size: 28px;
+            color: #fff;
+            letter-spacing: 0.03em;
+        }
+
+        .brand span {
+            display: block;
+            font-family: 'DM Sans', sans-serif;
+            font-size: 11px;
+            font-weight: 300;
+            color: rgba(255,255,255,0.7);
+            letter-spacing: 0.15em;
+            text-transform: uppercase;
+            margin-top: -2px;
+        }
+
+        /* ── NAV PILLS ── */
+        .nav-wrap {
+            background: var(--teal-dark);
+            overflow-x: auto;
+            scrollbar-width: none;
+        }
+        .nav-wrap::-webkit-scrollbar { display: none; }
+
+        nav {
+            max-width: 860px;
+            margin: 0 auto;
+            padding: 0 24px;
+            display: flex;
+            gap: 4px;
+            white-space: nowrap;
+        }
+
+        nav a {
+            display: inline-block;
+            padding: 10px 16px;
+            color: rgba(255,255,255,0.75);
+            text-decoration: none;
+            font-size: 13px;
+            font-weight: 500;
+            border-bottom: 2px solid transparent;
+            transition: all 0.2s;
+        }
+
+        nav a:hover, nav a.active {
+            color: #fff;
+            border-bottom-color: #7fffd4;
+        }
+
+        /* ── MAIN ── */
+        main {
+            max-width: 860px;
+            margin: 0 auto;
+            padding: 40px 24px 80px;
+        }
+
+        /* ── SECTION ── */
+        .policy-section {
+            background: var(--white);
+            border-radius: 16px;
+            margin-bottom: 28px;
+            overflow: hidden;
+            box-shadow: 0 1px 6px rgba(0,0,0,0.06);
+        }
+
+        .section-header {
+            display: flex;
+            align-items: center;
+            gap: 14px;
+            padding: 22px 28px;
+            border-bottom: 1px solid var(--border);
+        }
+
+        .section-icon {
+            width: 44px;
+            height: 44px;
+            border-radius: 12px;
+            background: var(--teal-light);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 20px;
+            flex-shrink: 0;
+        }
+
+        .section-title {
+            font-family: 'Playfair Display', serif;
+            font-size: 20px;
+            color: var(--teal-dark);
+        }
+
+        .section-body {
+            padding: 28px;
+        }
+
+        .section-body p {
+            color: var(--muted);
+            font-size: 14.5px;
+            margin-bottom: 14px;
+        }
+
+        .section-body p:last-child { margin-bottom: 0; }
+
+        .section-body h3 {
+            font-size: 14px;
+            font-weight: 600;
+            color: var(--text);
+            margin: 22px 0 8px;
+            text-transform: uppercase;
+            letter-spacing: 0.06em;
+        }
+
+        .section-body h3:first-child { margin-top: 0; }
+
+        ul.policy-list {
+            list-style: none;
+            padding: 0;
+            margin-bottom: 14px;
+        }
+
+        ul.policy-list li {
+            padding: 8px 0 8px 20px;
+            position: relative;
+            color: var(--muted);
+            font-size: 14.5px;
+            border-bottom: 1px solid #f5f5f5;
+        }
+
+        ul.policy-list li:last-child { border-bottom: none; }
+
+        ul.policy-list li::before {
+            content: '';
+            position: absolute;
+            left: 0;
+            top: 17px;
+            width: 7px;
+            height: 7px;
+            border-radius: 50%;
+            background: var(--teal);
+        }
+
+        .tag {
+            display: inline-block;
+            padding: 3px 10px;
+            border-radius: 20px;
+            font-size: 11px;
+            font-weight: 600;
+            letter-spacing: 0.05em;
+            text-transform: uppercase;
+            margin-left: 8px;
+            vertical-align: middle;
+        }
+        .tag-free  { background: #e8f5e9; color: #2e7d32; }
+        .tag-days  { background: #fff3e0; color: #e65100; }
+
+        /* ── UPDATED DATE ── */
+        .updated {
+            text-align: center;
+            font-size: 12px;
+            color: #aaa;
+            margin-top: 40px;
+        }
+
+        /* ── FOOTER ── */
+        footer {
+            background: var(--teal-dark);
+            color: rgba(255,255,255,0.6);
+            text-align: center;
+            padding: 24px;
+            font-size: 13px;
+        }
+
+        footer a { color: rgba(255,255,255,0.85); text-decoration: none; }
+
+        @media (max-width: 600px) {
+            .section-body { padding: 20px; }
+            .section-header { padding: 18px 20px; }
+            main { padding: 24px 16px 60px; }
+        }
+    </style>
+</head>
+<body>
+
+<header>
+    <div class="header-inner">
+        <div class="brand">
+            Bnzara
+            <span>Policies &amp; Legal</span>
+        </div>
+    </div>
+</header>
+
+<div class="nav-wrap">
+    <nav>
+        <a href="#privacy"      class="active">Privacy Policy</a>
+        <a href="#terms"               >Terms &amp; Conditions</a>
+        <a href="#return"              >Return Policy</a>
+        <a href="#shipping"            >Shipping Policy</a>
+        <a href="#cancellation"        >Cancellation Policy</a>
+        <a href="#help"                >Help &amp; Support</a>
+        <a href="#about"               >About Us</a>
+    </nav>
+</div>
+
+<main>
+
+    <!-- ── PRIVACY POLICY ── -->
+    <div class="policy-section" id="privacy">
+        <div class="section-header">
+            <div class="section-icon">🔒</div>
+            <h2 class="section-title">Privacy Policy</h2>
+        </div>
+        <div class="section-body">
+            <h3>Information We Collect</h3>
+            <p>We collect information you provide directly to us — such as your name, phone number, email address, and delivery address — when you create an account or place an order on Bnzara.</p>
+
+            <h3>How We Use Your Information</h3>
+            <ul class="policy-list">
+                <li>To process and deliver your orders</li>
+                <li>To send order confirmations and shipping updates</li>
+                <li>To respond to your queries and support requests</li>
+                <li>To improve our app and services</li>
+                <li>To send promotional offers (you can opt out anytime)</li>
+            </ul>
+
+            <h3>Information Sharing</h3>
+            <p>We do not sell, trade, or rent your personal information to third parties. We may share limited information with delivery partners (address details only) and payment processors (payment-related data only).</p>
+
+            <h3>Data Security</h3>
+            <p>We implement industry-standard security measures including encryption in transit and at rest to protect your personal information.</p>
+
+            <h3>Your Rights</h3>
+            <p>You have the right to access, update, or delete your personal information at any time by contacting us at <strong><a href="/cdn-cgi/l/email-protection" class="__cf_email__" data-cfemail="22515752524d505662404c584350430c414d4f">[email&#160;protected]</a></strong>.</p>
+        </div>
+    </div>
+
+    <!-- ── TERMS & CONDITIONS ── -->
+    <div class="policy-section" id="terms">
+        <div class="section-header">
+            <div class="section-icon">📋</div>
+            <h2 class="section-title">Terms &amp; Conditions</h2>
+        </div>
+        <div class="section-body">
+            <h3>Acceptance of Terms</h3>
+            <p>By using the Bnzara app, you agree to these Terms &amp; Conditions. Please read them carefully before using our services.</p>
+
+            <h3>Use of the App</h3>
+            <ul class="policy-list">
+                <li>You must be at least 18 years old to use our services</li>
+                <li>You are responsible for maintaining the confidentiality of your account</li>
+                <li>You agree not to misuse or attempt to harm our platform</li>
+            </ul>
+
+            <h3>Orders &amp; Payments</h3>
+            <ul class="policy-list">
+                <li>All prices are inclusive of applicable taxes unless stated otherwise</li>
+                <li>We reserve the right to cancel orders in case of pricing errors or stock unavailability</li>
+                <li>Payment must be completed at the time of placing an order</li>
+            </ul>
+
+            <h3>Intellectual Property</h3>
+            <p>All content on Bnzara including logos, images, and text is our intellectual property and may not be used without written permission.</p>
+
+            <h3>Limitation of Liability</h3>
+            <p>Bnzara shall not be liable for any indirect, incidental, or consequential damages arising from the use of our app or services.</p>
+
+            <h3>Contact</h3>
+            <p>For queries: <strong><a href="/cdn-cgi/l/email-protection" class="__cf_email__" data-cfemail="32414742425d404672505c485340531c515d5f">[email&#160;protected]</a></strong></p>
+        </div>
+    </div>
+
+    <!-- ── RETURN POLICY ── -->
+    <div class="policy-section" id="return">
+        <div class="section-header">
+            <div class="section-icon">↩️</div>
+            <h2 class="section-title">Return Policy <span class="tag tag-days">7 Days</span></h2>
+        </div>
+        <div class="section-body">
+            <ul class="policy-list">
+                <li>Items can be returned within <strong>7 days</strong> of delivery</li>
+                <li>Product must be unused and in original packaging with all tags intact</li>
+                <li>Damaged or defective items are eligible for immediate return or replacement</li>
+                <li>Refund will be processed within <strong>5–7 business days</strong> after return is received</li>
+                <li>To initiate a return, contact our support team with your Order ID</li>
+                <li>Items marked as non-returnable on the product page are not eligible for return</li>
+            </ul>
+        </div>
+    </div>
+
+    <!-- ── SHIPPING POLICY ── -->
+    <div class="policy-section" id="shipping">
+        <div class="section-header">
+            <div class="section-icon">🚚</div>
+            <h2 class="section-title">Shipping Policy <span class="tag tag-free">Free above ₹499</span></h2>
+        </div>
+        <div class="section-body">
+            <ul class="policy-list">
+                <li>Standard delivery: <strong>3–7 business days</strong></li>
+                <li>Express delivery: <strong>1–2 business days</strong> (available in select cities)</li>
+                <li>Free shipping on orders above <strong>₹499</strong></li>
+                <li>Shipping charge of <strong>₹49</strong> applies on orders below ₹499</li>
+                <li>You will receive a tracking link via SMS/email once your order is shipped</li>
+                <li>Delivery to remote areas may take additional 2–3 days</li>
+            </ul>
+        </div>
+    </div>
+
+    <!-- ── CANCELLATION POLICY ── -->
+    <div class="policy-section" id="cancellation">
+        <div class="section-header">
+            <div class="section-icon">❌</div>
+            <h2 class="section-title">Cancellation Policy</h2>
+        </div>
+        <div class="section-body">
+            <ul class="policy-list">
+                <li>Orders can be cancelled <strong>before they are shipped</strong></li>
+                <li>Once an order is shipped, cancellation is not possible</li>
+                <li>To cancel, go to <strong>My Orders</strong> and tap Cancel Order</li>
+                <li>Refund for cancelled orders will be processed within <strong>3–5 business days</strong></li>
+                <li>Prepaid orders will be refunded to the original payment method</li>
+                <li>Cash on Delivery orders have no refund applicable on cancellation</li>
+            </ul>
+        </div>
+    </div>
+
+    <!-- ── HELP & SUPPORT ── -->
+    <div class="policy-section" id="help">
+        <div class="section-header">
+            <div class="section-icon">💬</div>
+            <h2 class="section-title">Help &amp; Support</h2>
+        </div>
+        <div class="section-body">
+            <h3>We're Here to Help</h3>
+            <p>Reach out to us through any of the following channels and we'll get back to you as soon as possible.</p>
+
+            <h3>Email</h3>
+            <p>📧 <a href="mailto:support@bnzara.com" style="color:var(--teal);font-weight:500;">support@bnzara.com</a><br>
+            Response time: within 24 hours</p>
+
+            <h3>WhatsApp</h3>
+            <p>💬 <a href="https://wa.me/919999999999" style="color:var(--teal);font-weight:500;">+91 99999 99999</a><br>
+            Available: Mon–Sat, 10 AM – 6 PM</p>
+
+            <h3>Call Us</h3>
+            <p>📞 <a href="tel:+919999999999" style="color:var(--teal);font-weight:500;">+91 99999 99999</a><br>
+            Available: Mon–Sat, 10 AM – 6 PM</p>
+
+            <h3>Tips for Faster Support</h3>
+            <ul class="policy-list">
+                <li>For order issues, share your Order ID when contacting us</li>
+                <li>For refund status, allow 5–7 business days after return pickup</li>
+                <li>For damaged products, share photos via email or WhatsApp</li>
+                <li>For account issues, contact us with your registered phone number</li>
+            </ul>
+        </div>
+    </div>
+
+    <!-- ── ABOUT US ── -->
+    <div class="policy-section" id="about">
+        <div class="section-header">
+            <div class="section-icon">🏷️</div>
+            <h2 class="section-title">About Us</h2>
+        </div>
+        <div class="section-body">
+            <h3>Who We Are</h3>
+            <p>Bnzara is a fashion-first e-commerce platform bringing you the latest trends in clothing, accessories, and lifestyle products. We believe fashion should be accessible, affordable, and expressive for everyone.</p>
+
+            <h3>Our Mission</h3>
+            <p>To empower individuals to express their unique style through curated fashion collections, delivered fast and hassle-free to your doorstep.</p>
+
+            <h3>Why Bnzara</h3>
+            <ul class="policy-list">
+                <li>Curated collections updated regularly</li>
+                <li>Affordable pricing with no hidden charges</li>
+                <li>Fast and reliable delivery across India</li>
+                <li>Easy returns and dedicated customer support</li>
+                <li>Secure payments with multiple options</li>
+            </ul>
+
+            <h3>Contact</h3>
+            <p>📧 <a href="mailto:support@bnzara.com" style="color:var(--teal);font-weight:500;">support@bnzara.com</a><br>
+            📍 India</p>
+        </div>
+    </div>
+
+    <p class="updated">Last updated: January 2025 &nbsp;·&nbsp; support@bnzara.com</p>
+
+</main>
+
+<footer>
+    © 2025 Bnzara. All rights reserved. &nbsp;·&nbsp;
+    <a href="/cdn-cgi/l/email-protection#9eedebeeeef1eceadefcf0e4ffecffb0fdf1f3"><span class="__cf_email__" data-cfemail="1f6c6a6f6f706d6b5f7d71657e6d7e317c7072">[email&#160;protected]</span></a>
+</footer>
+
+<script data-cfasync="false" src="/cdn-cgi/scripts/5c5dd728/cloudflare-static/email-decode.min.js"></script><script>
+    // Active nav highlight on scroll
+    const sections =
