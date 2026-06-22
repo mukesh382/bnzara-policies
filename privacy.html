@@ -20,11 +20,14 @@
         .card-body{padding:28px}
         h3{font-size:13px;font-weight:600;color:var(--text);margin:22px 0 8px;text-transform:uppercase;letter-spacing:0.06em}
         h3:first-child{margin-top:0}
-        p{color:var(--muted);font-size:14.5px;margin-bottom:12px}
+        p{color:var(--muted);font-size:14.5px;margin-bottom:12px;line-height:1.8}
         ul{list-style:none;padding:0;margin-bottom:12px}
         ul li{padding:8px 0 8px 20px;position:relative;color:var(--muted);font-size:14.5px;border-bottom:1px solid #f5f5f5}
         ul li:last-child{border-bottom:none}
-        ul li::before{content:'';position:absolute;left:0;top:17px;width:7px;height:7px;border-radius:50%;background:var(--teal)}
+        ul li::before{content:'•';position:absolute;left:0;top:0;color:var(--teal);font-weight:bold}
+        .highlight{background:var(--teal-light);padding:16px;border-radius:8px;margin:12px 0;border-left:4px solid var(--teal)}
+        .service-box{background:#f9f9f9;padding:14px;border-radius:8px;margin:10px 0;border-left:3px solid var(--teal)}
+        .service-box strong{color:var(--teal-dark)}
         .updated{text-align:center;font-size:12px;color:#aaa;margin-top:24px}
         footer{background:var(--teal-dark);color:rgba(255,255,255,0.6);text-align:center;padding:20px;font-size:13px}
         footer a{color:rgba(255,255,255,0.85);text-decoration:none}
@@ -42,30 +45,174 @@
             <h1>Privacy Policy</h1>
         </div>
         <div class="card-body">
-            <h3>Information We Collect</h3>
-            <p>We collect information you provide directly to us — such as your name, phone number, email address, and delivery address — when you create an account or place an order on Bnzara.</p>
-
-            <h3>How We Use Your Information</h3>
+            
+            <h3>1. Information We Collect</h3>
+            <p>When you use Bnzara, we collect information you provide directly to us, including:</p>
             <ul>
-                <li>To process and deliver your orders</li>
-                <li>To send order confirmations and shipping updates</li>
-                <li>To respond to your queries and support requests</li>
-                <li>To improve our app and services</li>
-                <li>To send promotional offers (you can opt out anytime)</li>
+                <li>Full name and phone number</li>
+                <li>Email address</li>
+                <li>Delivery addresses and location data</li>
+                <li>Payment information (processed securely via third-party processors)</li>
+                <li>Order history and preferences</li>
+                <li>Device information (device ID, OS version, app version)</li>
+                <li>App usage data and analytics</li>
+                <li>Product images and photos (if uploaded)</li>
             </ul>
 
-            <h3>Information Sharing</h3>
-            <p>We do not sell, trade, or rent your personal information to third parties. We may share limited information with delivery partners (address details only) and payment processors (payment-related data only).</p>
+            <h3>2. How We Use Your Information</h3>
+            <p>We use the information we collect to:</p>
+            <ul>
+                <li>Process and deliver your orders</li>
+                <li>Send order confirmations and delivery updates</li>
+                <li>Respond to customer inquiries and support requests</li>
+                <li>Improve our app, services, and user experience</li>
+                <li>Send promotional offers and discounts (you can opt out anytime)</li>
+                <li>Analyze app usage and performance trends</li>
+                <li>Prevent fraud and ensure account security</li>
+                <li>Detect nearby stores based on your location</li>
+            </ul>
 
-            <h3>Data Security</h3>
-            <p>We implement industry-standard security measures including encryption in transit and at rest to protect your personal information.</p>
+            <h3>3. Third-Party Services & Data Processors</h3>
+            <div class="highlight">
+                <strong>We use trusted third-party services to deliver our app safely and securely.</strong>
+            </div>
+            <p>Your data is processed and stored with the following services:</p>
 
-            <h3>Your Rights</h3>
-            <p>You have the right to access, update, or delete your personal information at any time by contacting us at <strong>support@bnzara.com</strong>.</p>
+            <div class="service-box">
+                <strong>🔥 Google Firebase</strong><br>
+                Used for: User authentication, real-time database (Firestore), cloud storage, analytics<br>
+                Data: User accounts, order data, app preferences, analytics<br>
+                Privacy: <a href="https://firebase.google.com/support/privacy" target="_blank" style="color:#027368;text-decoration:underline">Firebase Privacy Policy</a>
+            </div>
+
+            <div class="service-box">
+                <strong>☁️ Cloudinary</strong><br>
+                Used for: Image and media hosting, optimization, and delivery<br>
+                Data: Product images, user photos<br>
+                Privacy: <a href="https://cloudinary.com/privacy" target="_blank" style="color:#027368;text-decoration:underline">Cloudinary Privacy Policy</a>
+            </div>
+
+            <div class="service-box">
+                <strong>🛡️ Cloudflare</strong><br>
+                Used for: DDoS protection, content delivery network (CDN), security<br>
+                Data: Website traffic, IP addresses<br>
+                Privacy: <a href="https://www.cloudflare.com/en-gb/privacypolicy/" target="_blank" style="color:#027368;text-decoration:underline">Cloudflare Privacy Policy</a>
+            </div>
+
+            <p><strong>Important:</strong> We do NOT sell your data to any third party. These services are bound by data processing agreements to protect your information.</p>
+
+            <h3>4. Information Sharing</h3>
+            <div class="highlight">
+                <strong>We do NOT sell, trade, or rent your personal information.</strong>
+            </div>
+            <p>We only share limited information with trusted partners:</p>
+            <ul>
+                <li>Delivery partners (delivery address and contact only)</li>
+                <li>Payment processors (payment data only, never stored by us)</li>
+                <li>Cloud service providers - Firebase, Cloudinary, Cloudflare (for secure infrastructure)</li>
+            </ul>
+
+            <h3>5. Data Security</h3>
+            <p>We implement industry-standard security measures to protect your information:</p>
+            <ul>
+                <li>256-bit TLS/SSL encryption for all data in transit</li>
+                <li>Encryption at rest in Firebase secure servers</li>
+                <li>DDoS protection via Cloudflare</li>
+                <li>Regular security audits and updates</li>
+                <li>Restricted access to personal data (admin only)</li>
+                <li>Secure Firebase authentication with multi-factor support</li>
+                <li>Firestore security rules (database-level protection)</li>
+            </ul>
+
+            <h3>6. Location Data</h3>
+            <p>We collect your location data to:</p>
+            <ul>
+                <li>Detect your nearest store</li>
+                <li>Provide accurate delivery estimates</li>
+                <li>Improve delivery route optimization</li>
+            </ul>
+            <p>You can disable location access in your device settings at any time. This may limit certain features of the app.</p>
+
+            <h3>7. Cookies and Tracking</h3>
+            <p>Bnzara uses cookies and analytics to:</p>
+            <ul>
+                <li>Remember your preferences and login status</li>
+                <li>Track app performance and usage patterns</li>
+                <li>Provide personalized recommendations</li>
+                <li>Improve user experience</li>
+            </ul>
+            <p>Firebase Analytics collects anonymized usage data to help us improve the app.</p>
+
+            <h3>8. Your Rights</h3>
+            <p>You have the right to:</p>
+            <ul>
+                <li>Access your personal information</li>
+                <li>Update or correct your information</li>
+                <li>Delete your account and associated data</li>
+                <li>Opt out of promotional communications</li>
+                <li>Request a copy of your data</li>
+                <li>Withdraw consent for data processing</li>
+            </ul>
+            <p>To exercise these rights, contact us at <strong>support@bnzara.com</strong>.</p>
+
+            <h3>9. Data Retention</h3>
+            <p>We retain your personal information for as long as necessary to provide our services. After account deletion:</p>
+            <ul>
+                <li>Account data is permanently deleted from Firebase</li>
+                <li>Order history may be retained for legal/tax compliance (anonymized)</li>
+                <li>Analytics data is aggregated and anonymized</li>
+            </ul>
+
+            <h3>10. Children's Privacy</h3>
+            <p>Bnzara is not intended for users under 13 years old. We do not knowingly collect personal information from children. If we become aware that a child has provided personal information, we will delete it immediately.</p>
+
+            <h3>11. Device Permissions</h3>
+            <p>Bnzara requests the following device permissions:</p>
+            <ul>
+                <li><strong>Location:</strong> To detect nearby stores (can be disabled)</li>
+                <li><strong>Camera:</strong> For delivery code scanning (optional)</li>
+                <li><strong>Photos:</strong> To upload receipts/images (optional)</li>
+                <li><strong>Contacts:</strong> To auto-fill addresses (optional)</li>
+            </ul>
+
+            <h3>12. Payment & Billing</h3>
+            <p>Payment processing is handled by third-party payment gateways. We:</p>
+            <ul>
+                <li>Do NOT store complete credit card details</li>
+                <li>Process payments securely via PCI DSS compliant processors</li>
+                <li>Use tokenization for recurring payments</li>
+                <li>Never see your full card number</li>
+            </ul>
+
+            <h3>13. Third-Party Links</h3>
+            <p>Bnzara may contain links to external websites. We are not responsible for their privacy practices. Always review third-party privacy policies before sharing information.</p>
+
+            <h3>14. International Data Transfer</h3>
+            <p>Your data is stored on Google Cloud Platform (Firebase) which may involve transfers across countries. By using Bnzara, you consent to such transfers under appropriate data protection safeguards.</p>
+
+            <h3>15. Contact Us</h3>
+            <p>If you have questions about this Privacy Policy:</p>
+            <ul>
+                <li>📧 Email: help.bnzara@gmail.com</li>
+                <li>📱 Phone: +91-8890-484-141</li>
+                <li>🏢 Address: Harjanpura teh-Neem ka thana,Dist-sikar, Rajasthan, India</li>
+            </ul>
+
+            <h3>16. Policy Updates</h3>
+            <p>We may update this policy to reflect changes in our practices or applicable laws. Significant updates will be communicated via email or in-app notification. Your continued use of Bnzara indicates acceptance of the updated policy.</p>
+
+            <h3>17. Compliance</h3>
+            <p>This Privacy Policy complies with:</p>
+            <ul>
+                <li>Google Play Store Privacy Policy requirements</li>
+                <li>Data protection best practices</li>
+                <li>App Store guidelines</li>
+            </ul>
+
         </div>
     </div>
-    <p class="updated">Last updated: January 2025 · support@bnzara.com</p>
+    <p class="updated">Last updated: June 2026 · support@bnzara.com</p>
 </main>
-<footer>© 2025 Bnzara. All rights reserved. · <a href="mailto:support@bnzara.com">support@bnzara.com</a></footer>
+<footer>© 2026 Bnzara. All rights reserved. · <a href="mailto:support@bnzara.com">support@bnzara.com</a></footer>
 </body>
 </html>
