@@ -10,9 +10,13 @@
         :root{--teal:#027368;--teal-dark:#015a52;--teal-light:#e6f4f2;--text:#1a1a1a;--muted:#666;--border:#e8e8e8;--bg:#f7f9f8}
         body{font-family:'DM Sans',sans-serif;background:var(--bg);color:var(--text);line-height:1.7}
         main{max-width:800px;margin:0 auto;padding:32px 20px 80px}
-        .store-header{background:var(--teal);color:#fff;padding:20px;border-radius:12px;margin-bottom:24px;text-align:center}
-        .store-name{font-family:'Playfair Display',serif;font-size:22px;margin-bottom:4px}
-        .store-sub{font-size:13px;color:rgba(255,255,255,0.8)}
+        .manager-card{background:#fff;border-radius:16px;padding:24px;box-shadow:0 1px 6px rgba(0,0,0,0.06);margin-bottom:24px;text-align:center}
+        .manager-image{width:100px;height:100px;border-radius:50%;object-fit:cover;margin:0 auto 16px;border:3px solid var(--teal);display:block}
+        .manager-name{font-family:'Playfair Display',serif;font-size:20px;color:var(--teal-dark);margin-bottom:4px}
+        .manager-title{font-size:12px;color:var(--muted);text-transform:uppercase;letter-spacing:0.05em;margin-bottom:12px}
+        .manager-contact{margin:16px 0;padding:12px;background:var(--teal-light);border-radius:8px}
+        .manager-contact a{color:var(--teal-dark);text-decoration:none;font-weight:600}
+        .manager-address{font-size:13px;color:var(--muted);margin-top:12px;padding-top:12px;border-top:1px solid var(--border)}
         .subtitle{color:var(--muted);font-size:14.5px;margin-bottom:24px;line-height:1.6}
         .card{background:#fff;border-radius:16px;overflow:hidden;box-shadow:0 1px 6px rgba(0,0,0,0.06);margin-bottom:16px}
         .contact-item{display:flex;align-items:center;gap:16px;padding:20px 24px;border-bottom:1px solid #f5f5f5;text-decoration:none;color:inherit;transition:background 0.2s}
@@ -38,18 +42,31 @@
 </head>
 <body>
 <main>
-    <div class="store-header">
-        <div class="store-name" id="store-name">Bnzara</div>
-        <div class="store-sub">Help & Support</div>
+    <!-- Store Manager Card -->
+    <div class="manager-card">
+        <h2 style="font-family:'Playfair Display',serif;font-size:16px;color:var(--teal-dark);margin-bottom:16px;text-transform:uppercase;letter-spacing:0.05em">Store Manager</h2>
+        <img id="manager-image" class="manager-image" src="https://via.placeholder.com/100" alt="Manager">
+        <div class="manager-name" id="manager-name">Manager Name</div>
+        <div class="manager-title">Store Manager</div>
+        <div class="manager-contact">
+            <div>
+                <a id="manager-call" href="tel:+919876543210">📞 Call</a>
+                <span style="color:#ccc"> | </span>
+                <a id="manager-whatsapp" href="https://wa.me/919876543210">💬 WhatsApp</a>
+            </div>
+        </div>
+        <div class="manager-address">
+            📍 <span id="manager-address">Store Address</span>
+        </div>
     </div>
 
-    <p class="subtitle">We're here to help! Reach out to us through any of the following channels and we'll get back to you as soon as possible.</p>
+    <p class="subtitle">We're here to help! Contact the store manager through any of the following channels and we'll get back to you as soon as possible.</p>
 
     <div class="card">
         <a class="contact-item" id="email-link" href="mailto:support@bnzara.com">
             <div class="contact-icon ci-blue">📧</div>
             <div class="contact-info">
-                <div class="contact-title">Email Us</div>
+                <div class="contact-title">Email</div>
                 <div class="contact-sub" id="email-sub">support@bnzara.com · Reply within 24 hours</div>
             </div>
             <span class="arrow">›</span>
@@ -65,7 +82,7 @@
         <a class="contact-item" id="call-link" href="tel:+919876543210">
             <div class="contact-icon ci-yellow">📞</div>
             <div class="contact-info">
-                <div class="contact-title">Call Us</div>
+                <div class="contact-title">Call</div>
                 <div class="contact-sub" id="call-sub">+91 98765 43210 · Mon–Sat, 9AM–9PM</div>
             </div>
             <span class="arrow">›</span>
@@ -86,28 +103,43 @@
 <footer>© 2026 Bnzara. All rights reserved. · <a href="mailto:support@bnzara.com">support@bnzara.com</a></footer>
 
 <script>
-    // Store-wise contact information
+    // Store-wise contact information (including manager)
     const storeContacts = {
         'harjanpura01': {
-            name: 'Harjanpura Store',
-            phone: '+91-9876-543-210',
-            phoneClean: '919876543210',
-            email: 'harjanpura01@bnzara.com',
-            whatsapp: '919876543210'
+            storeName: 'Harjanpura Store',
+            address: 'Harjanpura, Jaipur, Rajasthan',
+            manager: {
+                name: 'Rajesh Kumar',
+                phone: '+91-9876-543-210',
+                phoneClean: '919876543210',
+                email: 'harjanpura01@bnzara.com',
+                whatsapp: '919876543210',
+                profileImage: 'https://via.placeholder.com/100?text=Manager'
+            }
         },
         'store2': {
-            name: 'Store 2',
-            phone: '+91-9876-543-211',
-            phoneClean: '919876543211',
-            email: 'store2@bnzara.com',
-            whatsapp: '919876543211'
+            storeName: 'Store 2',
+            address: 'Store 2 Address, City',
+            manager: {
+                name: 'Manager Name 2',
+                phone: '+91-9876-543-211',
+                phoneClean: '919876543211',
+                email: 'store2@bnzara.com',
+                whatsapp: '919876543211',
+                profileImage: 'https://via.placeholder.com/100?text=Manager2'
+            }
         },
         'store3': {
-            name: 'Store 3',
-            phone: '+91-9876-543-212',
-            phoneClean: '919876543212',
-            email: 'store3@bnzara.com',
-            whatsapp: '919876543212'
+            storeName: 'Store 3',
+            address: 'Store 3 Address, City',
+            manager: {
+                name: 'Manager Name 3',
+                phone: '+91-9876-543-212',
+                phoneClean: '919876543212',
+                email: 'store3@bnzara.com',
+                whatsapp: '919876543212',
+                profileImage: 'https://via.placeholder.com/100?text=Manager3'
+            }
         }
     };
 
@@ -121,21 +153,26 @@
     function updateStoreInfo() {
         const storeId = getStoreId();
         const storeData = storeContacts[storeId] || storeContacts['harjanpura01'];
+        const manager = storeData.manager;
 
-        // Update store name
-        document.getElementById('store-name').textContent = storeData.name;
+        // Update manager info
+        document.getElementById('manager-name').textContent = manager.name;
+        document.getElementById('manager-image').src = manager.profileImage;
+        document.getElementById('manager-address').textContent = storeData.address;
+        document.getElementById('manager-call').href = `tel:${manager.phone}`;
+        document.getElementById('manager-whatsapp').href = `https://wa.me/${manager.whatsapp}`;
 
         // Update email
-        document.getElementById('email-link').href = `mailto:${storeData.email}`;
-        document.getElementById('email-sub').textContent = `${storeData.email} · Reply within 24 hours`;
+        document.getElementById('email-link').href = `mailto:${manager.email}`;
+        document.getElementById('email-sub').textContent = `${manager.email} · Reply within 24 hours`;
 
         // Update WhatsApp
-        document.getElementById('whatsapp-link').href = `https://wa.me/${storeData.whatsapp}`;
-        document.getElementById('whatsapp-sub').textContent = `${storeData.phone} · Mon–Sat, 9AM–9PM`;
+        document.getElementById('whatsapp-link').href = `https://wa.me/${manager.whatsapp}`;
+        document.getElementById('whatsapp-sub').textContent = `${manager.phone} · Mon–Sat, 9AM–9PM`;
 
         // Update Call
-        document.getElementById('call-link').href = `tel:${storeData.phone}`;
-        document.getElementById('call-sub').textContent = `${storeData.phone} · Mon–Sat, 9AM–9PM`;
+        document.getElementById('call-link').href = `tel:${manager.phone}`;
+        document.getElementById('call-sub').textContent = `${manager.phone} · Mon–Sat, 9AM–9PM`;
     }
 
     // Load store info when page loads
