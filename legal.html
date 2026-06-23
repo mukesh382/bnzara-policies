@@ -24,11 +24,12 @@
         .card-body.open{display:block}
         h3{font-size:12px;font-weight:600;color:var(--text);margin:18px 0 8px;text-transform:uppercase;letter-spacing:0.06em}
         h3:first-child{margin-top:0}
-        p{color:var(--muted);font-size:14.5px;margin-bottom:12px}
+        p{color:var(--muted);font-size:14.5px;margin-bottom:12px;line-height:1.8}
         ul{list-style:none;padding:0;margin-bottom:12px}
         ul li{padding:8px 0 8px 20px;position:relative;color:var(--muted);font-size:14.5px;border-bottom:1px solid #f5f5f5}
         ul li:last-child{border-bottom:none}
-        ul li::before{content:'';position:absolute;left:0;top:17px;width:7px;height:7px;border-radius:50%;background:var(--teal)}
+        ul li::before{content:'•';position:absolute;left:0;top:0;color:var(--teal);font-weight:bold}
+        .highlight{background:var(--teal-light);padding:12px;border-radius:6px;margin:10px 0;border-left:3px solid var(--teal)}
         .updated{text-align:center;font-size:12px;color:#aaa;margin-top:24px}
         footer{background:var(--teal-dark);color:rgba(255,255,255,0.6);text-align:center;padding:20px;font-size:13px}
         footer a{color:rgba(255,255,255,0.85);text-decoration:none}
@@ -41,7 +42,7 @@
 </header>
 <main>
 
-    <!-- Return -->
+    <!-- Return Policy -->
     <div class="card">
         <div class="card-header" onclick="toggle(this)">
             <div class="card-header-left">
@@ -51,39 +52,99 @@
             <span class="arrow">▼</span>
         </div>
         <div class="card-body">
+            <h3>Return Window</h3>
             <ul>
                 <li>Items can be returned within <strong>7 days</strong> of delivery</li>
-                <li>Product must be unused and in original packaging with all tags intact</li>
-                <li>Damaged or defective items are eligible for immediate return or replacement</li>
-                <li>Refund will be processed within <strong>5–7 business days</strong> after return is received</li>
-                <li>To initiate a return, contact our support team with your Order ID</li>
-                <li>Items marked as non-returnable on the product page are not eligible for return</li>
+                <li>Return request must be initiated within this period via the app</li>
+                <li>After 7 days, returns are not accepted</li>
+            </ul>
+
+            <h3>Return Eligibility</h3>
+            <ul>
+                <li>Product must be <strong>unused and in original packaging</strong></li>
+                <li>All tags and seals must be intact</li>
+                <li>No signs of wear, damage, or use</li>
+                <li>Damaged or defective items are eligible for immediate return or replacement at no cost</li>
+            </ul>
+
+            <h3>Non-Returnable Items</h3>
+            <ul>
+                <li>Items marked as <strong>"Non-returnable"</strong> on the product page</li>
+                <li>Perishable or consumable products</li>
+                <li>Items that have been tampered with or damaged due to customer misuse</li>
+            </ul>
+
+            <h3>Return Process</h3>
+            <ul>
+                <li>Go to <strong>My Orders</strong> → Select order → Tap <strong>Return Item</strong></li>
+                <li>Provide reason for return</li>
+                <li>Wait for approval (usually within 24 hours)</li>
+                <li>Once approved, pick-up will be scheduled at your address</li>
+            </ul>
+
+            <h3>Refund Timeline</h3>
+            <ul>
+                <li>Refund processed within <strong>5–7 business days</strong> after return is received and inspected</li>
+                <li>Amount credited to original payment method (Wallet or Card/Bank)</li>
+                <li>Wallet refunds appear instantly</li>
             </ul>
         </div>
     </div>
 
-    <!-- Shipping -->
+    <!-- Delivery Policy -->
     <div class="card">
         <div class="card-header" onclick="toggle(this)">
             <div class="card-header-left">
                 <div class="icon">🚚</div>
-                <h2>Shipping Policy</h2>
+                <h2>Delivery Policy</h2>
             </div>
             <span class="arrow">▼</span>
         </div>
         <div class="card-body">
+            <h3>Delivery Coverage & Time</h3>
+            <div class="highlight">
+                <strong>Bnzara delivers only within 1–2 km radius from our store.</strong>
+            </div>
             <ul>
-                <li>Standard delivery: <strong>3–7 business days</strong></li>
-                <li>Express delivery: <strong>1–2 business days</strong> (available in select cities)</li>
-                <li>Free shipping on orders above <strong>₹499</strong></li>
-                <li>Shipping charge of <strong>₹49</strong> applies on orders below ₹499</li>
-                <li>You will receive a tracking link via SMS/email once your order is shipped</li>
-                <li>Delivery to remote areas may take additional 2–3 days</li>
+                <li><strong>Average delivery time:</strong> 15 minutes</li>
+                <li><strong>Maximum delivery time:</strong> 30 minutes</li>
+                <li>Delivery times may vary based on traffic, distance, and item availability</li>
+                <li>All deliveries are within store's service radius only</li>
+            </ul>
+
+            <h3>Delivery Charges & Platform Fees</h3>
+            <ul>
+                <li><strong>Delivery Charge:</strong> Store-specific (shown at checkout)</li>
+                <li><strong>Platform Fee:</strong> Store-specific (shown at checkout)</li>
+                <li>Free delivery offers may apply based on store promotions</li>
+                <li>All charges are clearly displayed before order confirmation</li>
+            </ul>
+
+            <h3>Order Tracking</h3>
+            <ul>
+                <li>Real-time order status available in the <strong>My Orders</strong> section</li>
+                <li>Track order from "Placed" → "Confirmed" → "Out for Delivery" → "Delivered"</li>
+                <li>No separate SMS/Email tracking (check app for live status)</li>
+            </ul>
+
+            <h3>Delivery Address</h3>
+            <ul>
+                <li>Delivery address must be within 1–2 km of the store</li>
+                <li>Ensure accurate address with complete details (building, flat no., landmarks)</li>
+                <li>Delivery boy will contact you if address is unclear</li>
+            </ul>
+
+            <h3>Failed Delivery Attempts</h3>
+            <ul>
+                <li>If delivery boy cannot reach you, we will attempt redelivery</li>
+                <li>If delivery cannot be completed within 6 hours, order will be automatically cancelled</li>
+                <li>Refund will be processed to your original payment method</li>
+                <li>Contact support for manual intervention if needed</li>
             </ul>
         </div>
     </div>
 
-    <!-- Cancellation -->
+    <!-- Cancellation Policy -->
     <div class="card">
         <div class="card-header" onclick="toggle(this)">
             <div class="card-header-left">
@@ -93,20 +154,185 @@
             <span class="arrow">▼</span>
         </div>
         <div class="card-body">
+            <h3>How to Cancel</h3>
             <ul>
-                <li>Orders can be cancelled <strong>before they are shipped</strong></li>
-                <li>Once an order is shipped, cancellation is not possible</li>
-                <li>To cancel, go to <strong>My Orders</strong> and tap Cancel Order</li>
-                <li>Refund for cancelled orders will be processed within <strong>3–5 business days</strong></li>
-                <li>Prepaid orders will be refunded to the original payment method</li>
-                <li>Cash on Delivery orders have no refund applicable on cancellation</li>
+                <li>Open the app → <strong>My Orders</strong></li>
+                <li>Select the order you want to cancel</li>
+                <li>Tap on <strong>Help</strong> tab → Select <strong>Cancel Order</strong></li>
+                <li>Provide reason (optional)</li>
+                <li>Confirm cancellation</li>
+            </ul>
+
+            <h3>When Can You Cancel?</h3>
+            <ul>
+                <li>Orders can be cancelled <strong>before delivery boy is assigned</strong></li>
+                <li>Once delivery boy is on the way, cancellation may not be possible</li>
+                <li>Contact support immediately for urgent cancellation requests</li>
+            </ul>
+
+            <h3>Refund After Cancellation</h3>
+            <ul>
+                <li><strong>Wallet Payments:</strong> Instant refund to wallet</li>
+                <li><strong>Card/Bank Payments:</strong> Refund within 3–5 business days to original payment method</li>
+                <li><strong>Cash on Delivery:</strong> No refund applicable (order not taken)</li>
+                <li>Processing time may vary based on your bank</li>
+            </ul>
+
+            <h3>Automatic Cancellation</h3>
+            <ul>
+                <li>Orders automatically cancelled if <strong>delivery boy is not available within 6 hours</strong></li>
+                <li>You will receive a cancellation notification in the app</li>
+                <li>Refund will be automatically processed</li>
             </ul>
         </div>
     </div>
 
-    <p class="updated">Last updated: January 2025 · support@bnzara.com</p>
+    <!-- Terms & Conditions -->
+    <div class="card">
+        <div class="card-header" onclick="toggle(this)">
+            <div class="card-header-left">
+                <div class="icon">📋</div>
+                <h2>Terms & Conditions</h2>
+            </div>
+            <span class="arrow">▼</span>
+        </div>
+        <div class="card-body">
+            <h3>User Responsibilities</h3>
+            <ul>
+                <li>You must be at least 13 years old to use Bnzara</li>
+                <li>You are responsible for maintaining account confidentiality</li>
+                <li>You must provide accurate information during registration and checkout</li>
+                <li>You agree to use the app for lawful purposes only</li>
+            </ul>
+
+            <h3>Intellectual Property</h3>
+            <ul>
+                <li>All content (text, images, logos) is owned by Bnzara or licensed partners</li>
+                <li>Reproduction without permission is prohibited</li>
+                <li>Users grant Bnzara license to use uploaded content</li>
+            </ul>
+
+            <h3>Product Accuracy</h3>
+            <ul>
+                <li>We strive to display accurate product descriptions and prices</li>
+                <li>Actual product may vary slightly from images due to lighting or display</li>
+                <li>Prices are subject to change without notice</li>
+                <li>We reserve the right to correct pricing errors</li>
+                <li>Product availability is subject to store inventory</li>
+            </ul>
+
+            <h3>Payment Terms</h3>
+            <ul>
+                <li>Payment must be completed before order confirmation</li>
+                <li>We accept Wallet, Cards, UPI, and Cash on Delivery (where available)</li>
+                <li>Duplicate charges should be reported within 24 hours</li>
+                <li>Refunds will be to the original payment method</li>
+            </ul>
+
+            <h3>Prohibited Activities</h3>
+            <ul>
+                <li>Using the app for fraud, hacking, or illegal activities</li>
+                <li>Posting abusive, threatening, or inappropriate content</li>
+                <li>Attempting to interfere with app functionality</li>
+                <li>Reselling items in bulk without permission</li>
+                <li>Using automated tools to scrape data</li>
+            </ul>
+        </div>
+    </div>
+
+    <!-- Disclaimer -->
+    <div class="card">
+        <div class="card-header" onclick="toggle(this)">
+            <div class="card-header-left">
+                <div class="icon">⚠️</div>
+                <h2>Disclaimer & Liability</h2>
+            </div>
+            <span class="arrow">▼</span>
+        </div>
+        <div class="card-body">
+            <h3>Service Disclaimer</h3>
+            <div class="highlight">
+                <strong>Bnzara is provided "AS IS" without any warranties or guarantees.</strong>
+            </div>
+            <ul>
+                <li>We do not guarantee uninterrupted or error-free service</li>
+                <li>App may have bugs or temporary outages</li>
+                <li>We are not responsible for technical failures beyond our control</li>
+            </ul>
+
+            <h3>Delivery Disclaimer</h3>
+            <ul>
+                <li>Delivery times are approximate and subject to traffic, weather, and availability</li>
+                <li>We are not responsible for delivery delays due to factors beyond our control</li>
+                <li>Customers must provide accurate delivery address and contact number</li>
+                <li>Customers are responsible for receiving items and inspecting upon delivery</li>
+            </ul>
+
+            <h3>Product Disclaimer</h3>
+            <ul>
+                <li>We are not responsible for product quality from suppliers</li>
+                <li>Customers must inspect items immediately upon delivery</li>
+                <li>Quality complaints must be made within 24 hours of delivery</li>
+            </ul>
+
+            <h3>Limitation of Liability</h3>
+            <ul>
+                <li>Bnzara is not liable for indirect, incidental, or consequential damages</li>
+                <li>Our liability is limited to the amount paid for the order</li>
+                <li>We are not responsible for third-party services (delivery partners, payment gateways)</li>
+            </ul>
+
+            <h3>Force Majeure</h3>
+            <ul>
+                <li>Bnzara is not responsible for delays/cancellations due to natural disasters, extreme weather, lockdowns, strikes, or pandemics</li>
+                <li>We will make reasonable efforts to resume operations</li>
+            </ul>
+        </div>
+    </div>
+
+    <!-- Dispute Resolution -->
+    <div class="card">
+        <div class="card-header" onclick="toggle(this)">
+            <div class="card-header-left">
+                <div class="icon">⚖️</div>
+                <h2>Dispute Resolution</h2>
+            </div>
+            <span class="arrow">▼</span>
+        </div>
+        <div class="card-body">
+            <h3>Grievance Redressal</h3>
+            <ul>
+                <li>Contact our support team at <strong>support@bnzara.com</strong></li>
+                <li>We will respond within <strong>24–48 hours</strong></li>
+                <li>Provide order ID for faster resolution</li>
+            </ul>
+
+            <h3>Resolution Process</h3>
+            <ul>
+                <li>We will investigate your complaint within 5–7 days</li>
+                <li>Possible outcomes: refund, replacement, or store credit</li>
+                <li>If not satisfied, you can escalate to senior management</li>
+            </ul>
+
+            <h3>Escalation</h3>
+            <ul>
+                <li>Email escalation: <strong>grievance@bnzara.com</strong></li>
+                <li>Senior team will respond within 7 days</li>
+                <li>Phone support: <strong>+91-9876-543-210</strong> (9 AM – 9 PM)</li>
+            </ul>
+
+            <h3>Jurisdiction</h3>
+            <ul>
+                <li>These terms are governed by <strong>Indian law</strong></li>
+                <li>Disputes will be resolved under <strong>Consumer Protection Act, 2019</strong></li>
+                <li>Courts in Jaipur, Rajasthan have exclusive jurisdiction</li>
+            </ul>
+        </div>
+    </div>
+
+    <p class="updated">Last updated: June 2026 · support@bnzara.com</p>
 </main>
-<footer>© 2025 Bnzara. All rights reserved. · <a href="mailto:support@bnzara.com">support@bnzara.com</a></footer>
+<footer>© 2026 Bnzara. All rights reserved. · <a href="mailto:support@bnzara.com">support@bnzara.com</a></footer>
 <script>
     function toggle(header) {
         const body  = header.nextElementSibling;
