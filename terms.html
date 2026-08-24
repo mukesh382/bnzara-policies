@@ -3,186 +3,82 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Help &amp; Support — TurantBuy</title>
+    <title>Terms &amp; Conditions — TurantBuy</title>
     <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@600&family=DM+Sans:wght@300;400;500&display=swap" rel="stylesheet">
     <style>
         *{box-sizing:border-box;margin:0;padding:0}
         :root{--teal:#027368;--teal-dark:#015a52;--teal-light:#e6f4f2;--text:#1a1a1a;--muted:#666;--border:#e8e8e8;--bg:#f7f9f8}
         body{font-family:'DM Sans',sans-serif;background:var(--bg);color:var(--text);line-height:1.7}
+        header{background:var(--teal);padding:18px 24px;box-shadow:0 2px 20px rgba(2,115,104,0.3)}
+        .brand{font-family:'Playfair Display',serif;font-size:26px;color:#fff}
+        .brand span{display:block;font-family:'DM Sans',sans-serif;font-size:11px;font-weight:300;color:rgba(255,255,255,0.7);letter-spacing:0.15em;text-transform:uppercase}
         main{max-width:800px;margin:0 auto;padding:32px 20px 80px}
-        .manager-card{background:#fff;border-radius:16px;padding:24px;box-shadow:0 1px 6px rgba(0,0,0,0.06);margin-bottom:24px;text-align:center}
-        .manager-image{width:100px;height:100px;border-radius:50%;object-fit:cover;margin:0 auto 16px;border:3px solid var(--teal);display:block;background:var(--teal-light)}
-        .manager-name{font-family:'Playfair Display',serif;font-size:20px;color:var(--teal-dark);margin-bottom:4px}
-        .manager-title{font-size:12px;color:var(--muted);text-transform:uppercase;letter-spacing:0.05em;margin-bottom:12px}
-        .manager-contact{margin:16px 0;padding:12px;background:var(--teal-light);border-radius:8px}
-        .manager-contact a{color:var(--teal-dark);text-decoration:none;font-weight:600}
-        .manager-address{font-size:13px;color:var(--muted);margin-top:12px;padding-top:12px;border-top:1px solid var(--border)}
-        .subtitle{color:var(--muted);font-size:14.5px;margin-bottom:24px;line-height:1.6}
-        .card{background:#fff;border-radius:16px;overflow:hidden;box-shadow:0 1px 6px rgba(0,0,0,0.06);margin-bottom:16px}
-        .contact-item{display:flex;align-items:center;gap:16px;padding:20px 24px;border-bottom:1px solid #f5f5f5;text-decoration:none;color:inherit;transition:background 0.2s}
-        .contact-item:hover{background:#f9f9f9}
-        .contact-item:last-child{border-bottom:none}
-        .contact-icon{width:48px;height:48px;border-radius:12px;display:flex;align-items:center;justify-content:center;font-size:22px;flex-shrink:0}
-        .ci-blue{background:#e3f2fd}
-        .ci-green{background:#e8f5e9}
-        .ci-yellow{background:#fff8e1}
-        .contact-info{flex:1}
-        .contact-title{font-weight:600;font-size:15px;color:var(--text)}
-        .contact-sub{font-size:13px;color:var(--muted);margin-top:2px}
-        .arrow{color:#ccc;font-size:16px}
-        .tips-card{background:#fff;border-radius:16px;padding:24px;box-shadow:0 1px 6px rgba(0,0,0,0.06)}
-        .tips-title{font-family:'Playfair Display',serif;font-size:18px;color:var(--teal-dark);margin-bottom:14px}
-        ul{list-style:none;padding:0}
-        ul li{padding:8px 0 8px 20px;position:relative;color:var(--muted);font-size:14px;border-bottom:1px solid #f5f5f5}
+        .card{background:#fff;border-radius:16px;overflow:hidden;box-shadow:0 1px 6px rgba(0,0,0,0.06)}
+        .card-header{display:flex;align-items:center;gap:14px;padding:22px 28px;border-bottom:1px solid var(--border);background:var(--teal-light)}
+        .icon{width:44px;height:44px;border-radius:12px;background:#fff;display:flex;align-items:center;justify-content:center;font-size:22px;flex-shrink:0}
+        .card-header h1{font-family:'Playfair Display',serif;font-size:22px;color:var(--teal-dark)}
+        .card-body{padding:28px}
+        h3{font-size:13px;font-weight:600;color:var(--text);margin:22px 0 8px;text-transform:uppercase;letter-spacing:0.06em}
+        h3:first-child{margin-top:0}
+        p{color:var(--muted);font-size:14.5px;margin-bottom:12px}
+        ul{list-style:none;padding:0;margin-bottom:12px}
+        ul li{padding:8px 0 8px 20px;position:relative;color:var(--muted);font-size:14.5px;border-bottom:1px solid #f5f5f5}
         ul li:last-child{border-bottom:none}
-        ul li::before{content:'•';position:absolute;left:0;top:0;color:var(--teal);font-weight:bold}
+        ul li::before{content:'';position:absolute;left:0;top:17px;width:7px;height:7px;border-radius:50%;background:var(--teal)}
+        .updated{text-align:center;font-size:12px;color:#aaa;margin-top:24px}
         footer{background:var(--teal-dark);color:rgba(255,255,255,0.6);text-align:center;padding:20px;font-size:13px}
         footer a{color:rgba(255,255,255,0.85);text-decoration:none}
+        @media(max-width:600px){.card-body{padding:20px}.card-header{padding:18px 20px}}
     </style>
 </head>
 <body>
+<header>
+    <div class="brand">TurantBuy <span>Terms &amp; Conditions</span></div>
+</header>
 <main>
-    <!-- Store Manager Card -->
-    <div class="manager-card">
-        <h2 style="font-family:'Playfair Display',serif;font-size:16px;color:var(--teal-dark);margin-bottom:16px;text-transform:uppercase;letter-spacing:0.05em">Store Manager</h2>
-        <img id="manager-image" class="manager-image" alt="Manager">
-        <div class="manager-name" id="manager-name">Manager Name</div>
-        <div class="manager-title">Store Manager</div>
-        <div class="manager-contact">
-            <div>
-                <a id="manager-call" href="tel:+919876543210">📞 Call</a>
-                <span style="color:#ccc"> | </span>
-                <a id="manager-whatsapp" href="https://wa.me/919876543210">💬 WhatsApp</a>
-            </div>
-        </div>
-        <div class="manager-address">
-            📍 <span id="manager-address">Store Address</span>
-        </div>
-    </div>
-    <p class="subtitle">Kuch bhi poochhna ho to store manager se seedha baat karo — call, WhatsApp ya email, jo aapko theek lage.</p>
     <div class="card">
-        <a class="contact-item" id="email-link" href="mailto:support@bnzara.com">
-            <div class="contact-icon ci-blue">📧</div>
-            <div class="contact-info">
-                <div class="contact-title">Email</div>
-                <div class="contact-sub" id="email-sub">support@bnzara.com · Reply within 24 hours</div>
-            </div>
-            <span class="arrow">›</span>
-        </a>
-        <a class="contact-item" id="whatsapp-link" href="https://wa.me/919876543210">
-            <div class="contact-icon ci-green">💬</div>
-            <div class="contact-info">
-                <div class="contact-title">WhatsApp</div>
-                <div class="contact-sub" id="whatsapp-sub">+91 98765 43210 · Mon–Sat, 9AM–9PM</div>
-            </div>
-            <span class="arrow">›</span>
-        </a>
-        <a class="contact-item" id="call-link" href="tel:+919876543210">
-            <div class="contact-icon ci-yellow">📞</div>
-            <div class="contact-info">
-                <div class="contact-title">Call</div>
-                <div class="contact-sub" id="call-sub">+91 98765 43210 · Mon–Sat, 9AM–9PM</div>
-            </div>
-            <span class="arrow">›</span>
-        </a>
+        <div class="card-header">
+            <div class="icon">📋</div>
+            <h1>Terms &amp; Conditions</h1>
+        </div>
+        <div class="card-body">
+            <h3>Acceptance of Terms</h3>
+            <p>By using the TurantBuy app, you agree to these Terms &amp; Conditions. Please read them carefully before using our services.</p>
+            <h3>Use of the App</h3>
+            <ul>
+                <li>You must be at least 18 years old to use our services</li>
+                <li>You are responsible for maintaining the confidentiality of your account</li>
+                <li>Your account is linked to your mobile number and may be used on one device at a time</li>
+                <li>You agree not to misuse or attempt to harm our platform</li>
+            </ul>
+            <h3>Orders &amp; Payments</h3>
+            <ul>
+                <li>All prices are inclusive of applicable taxes unless stated otherwise</li>
+                <li>Delivery charges and platform fees, if any, are shown before you confirm the order</li>
+                <li>You may pay online at the time of ordering, or in cash at the time of delivery where Cash on Delivery is available</li>
+                <li>Prices and stock are confirmed when you place the order; we reserve the right to cancel an order in case of a pricing error or stock unavailability</li>
+                <li>If an order is cancelled after an online payment, the amount is refunded to the original payment method</li>
+            </ul>
+            <h3>Delivery</h3>
+            <ul>
+                <li>Delivery is available only within the service area of your selected store</li>
+                <li>Delivery times shown in the app are estimates and may vary</li>
+                <li>Please provide a complete address and a reachable mobile number</li>
+            </ul>
+            <h3>Returns &amp; Cancellation</h3>
+            <p>Returns, cancellations and refunds are covered in detail in our <strong>Legal Policies</strong> page inside the app. In short: return requests must be raised within 24 hours of delivery, and grocery and food items are not returnable — but wrong, damaged or missing items are always replaced or refunded.</p>
+            <h3>Intellectual Property</h3>
+            <p>All content on TurantBuy including logos, images, and text is our intellectual property and may not be used without written permission.</p>
+            <h3>Limitation of Liability</h3>
+            <p>TurantBuy shall not be liable for any indirect, incidental, or consequential damages arising from the use of our app or services. Our liability is limited to the amount paid for the order in question.</p>
+            <h3>Governing Law</h3>
+            <p>These terms are governed by Indian law and the Consumer Protection Act, 2019.</p>
+            <h3>Contact</h3>
+            <p>For queries: <strong>support@turantbuy.com</strong> · +91-8890-484-141</p>
+        </div>
     </div>
-    <div class="tips-card">
-        <div class="tips-title">Jaldi madad ke liye</div>
-        <ul>
-            <li>Order se judi baat ho to Order ID zaroor bhejein</li>
-            <li>Saaman kharaab ya kam nikla ho to photo bhej dein</li>
-            <li>Refund return pickup ke 3–5 kaam ke din mein aata hai</li>
-            <li>Account ki dikkat ho to registered mobile number batayein</li>
-            <li>Return karna ho to delivery ke 24 ghante ke andar batayein</li>
-        </ul>
-    </div>
+    <p class="updated">Last updated: August 2026 · support@turantbuy.com</p>
 </main>
-<footer>© 2026 TurantBuy. All rights reserved. · <a href="mailto:support@bnzara.com">support@bnzara.com</a></footer>
-<script>
-    // ⚠️ Manager ki photo ke liye inline SVG.
-    //
-    // Pehle yahan via.placeholder.com tha — wo service band ho chuki hai,
-    // isliye har manager ki jagah tooti hui image dikhti thi. Ye SVG data-URI
-    // hai: koi network call nahi, kabhi fail nahi hoga.
-    const AVATAR = "data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'%3E%3Crect fill='%23e6f4f2' width='100' height='100'/%3E%3Ccircle cx='50' cy='38' r='16' fill='%23027368'/%3E%3Cpath d='M20 88c0-17 13-28 30-28s30 11 30 28z' fill='%23027368'/%3E%3C/svg%3E";
-
-    // ⚠️ Keys HAMESHA chhote akshar mein rakhein.
-    //
-    // D1 mein storeId 'Harjanpura01' hai (badi H se), aur app URL mein wahi
-    // bhejti hai. Lookup se pehle neeche toLowerCase() lagta hai, isliye
-    // yahan ki keys chhoti honi chahiye — warna store match hi nahi karega
-    // aur har store par pehla wala manager dikhega.
-    const storeContacts = {
-        'harjanpura01': {
-            storeName: 'Harjanpura Store',
-            address: 'Harjanpura, Jaipur, Rajasthan',
-            manager: {
-                name: 'Rajesh Kumar',
-                phone: '+91-9876-543-210',
-                phoneClean: '919876543210',
-                email: 'harjanpura01@bnzara.com',
-                whatsapp: '919876543210',
-                profileImage: AVATAR
-            }
-        },
-        'store2': {
-            storeName: 'Store 2',
-            address: 'Store 2 Address, City',
-            manager: {
-                name: 'Manager Name 2',
-                phone: '+91-9876-543-211',
-                phoneClean: '919876543211',
-                email: 'store2@bnzara.com',
-                whatsapp: '919876543211',
-                profileImage: AVATAR
-            }
-        },
-        'store3': {
-            storeName: 'Store 3',
-            address: 'Store 3 Address, City',
-            manager: {
-                name: 'Manager Name 3',
-                phone: '+91-9876-543-212',
-                phoneClean: '919876543212',
-                email: 'store3@bnzara.com',
-                whatsapp: '919876543212',
-                profileImage: AVATAR
-            }
-        }
-    };
-
-    function getStoreId() {
-        const params = new URLSearchParams(window.location.search);
-        // ⚠️ toLowerCase — dekho upar wala comment
-        return (params.get('store') || 'harjanpura01').trim().toLowerCase();
-    }
-
-    function updateStoreInfo() {
-        const storeId = getStoreId();
-        const storeData = storeContacts[storeId] || storeContacts['harjanpura01'];
-        const manager = storeData.manager;
-
-        document.getElementById('manager-name').textContent = manager.name;
-        document.getElementById('manager-image').src = manager.profileImage;
-        document.getElementById('manager-address').textContent = storeData.address;
-
-        // ⚠️ tel: aur wa.me ke liye SAAF number chahiye — dashes wala nahi.
-        // Pehle yahan manager.phone (dashes ke saath) jaata tha, jisse kuch
-        // phone dialer link nahi kholte the.
-        document.getElementById('manager-call').href = `tel:+${manager.phoneClean}`;
-        document.getElementById('manager-whatsapp').href = `https://wa.me/${manager.whatsapp}`;
-
-        document.getElementById('email-link').href = `mailto:${manager.email}`;
-        document.getElementById('email-sub').textContent = `${manager.email} · Reply within 24 hours`;
-
-        document.getElementById('whatsapp-link').href = `https://wa.me/${manager.whatsapp}`;
-        document.getElementById('whatsapp-sub').textContent = `${manager.phone} · Mon–Sat, 9AM–9PM`;
-
-        document.getElementById('call-link').href = `tel:+${manager.phoneClean}`;
-        document.getElementById('call-sub').textContent = `${manager.phone} · Mon–Sat, 9AM–9PM`;
-    }
-
-    updateStoreInfo();
-</script>
+<footer>© 2026 TurantBuy. All rights reserved. · <a href="mailto:support@turantbuy.com">support@turantbuy.com</a></footer>
 </body>
 </html>
