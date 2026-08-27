@@ -9,7 +9,7 @@
         *{box-sizing:border-box;margin:0;padding:0}
         :root{--teal:#027368;--teal-dark:#015a52;--teal-light:#e6f4f2;--text:#1a1a1a;--muted:#666;--border:#e8e8e8;--bg:#f7f9f8}
         body{font-family:'DM Sans',sans-serif;background:var(--bg);color:var(--text);line-height:1.7}
-        main{max-width:800px;margin:0 auto;padding:32px 20px 80px}
+        main{max-width:800px;margin:0 auto;padding:20px 20px 60px}
         .manager-card{background:#fff;border-radius:16px;padding:24px;box-shadow:0 1px 6px rgba(0,0,0,0.06);margin-bottom:24px;text-align:center}
         .manager-image{width:100px;height:100px;border-radius:50%;object-fit:cover;margin:0 auto 16px;border:3px solid var(--teal);display:block;background:var(--teal-light)}
         .manager-name{font-family:'Playfair Display',serif;font-size:20px;color:var(--teal-dark);margin-bottom:4px}
@@ -50,9 +50,9 @@
         <div class="manager-title">Store Manager</div>
         <div class="manager-contact">
             <div>
-                <a id="manager-call" href="tel:+919876543210">📞 Call</a>
+                <a id="manager-call" href="tel:+918890484141">📞 Call</a>
                 <span style="color:#ccc"> | </span>
-                <a id="manager-whatsapp" href="https://wa.me/919876543210">💬 WhatsApp</a>
+                <a id="manager-whatsapp" href="https://wa.me/918890484141">💬 WhatsApp</a>
             </div>
         </div>
         <div class="manager-address">
@@ -61,27 +61,27 @@
     </div>
     <p class="subtitle">Kuch bhi poochhna ho to store manager se seedha baat karo — call, WhatsApp ya email, jo aapko theek lage.</p>
     <div class="card">
-        <a class="contact-item" id="email-link" href="mailto:support@bnzara.com">
+        <a class="contact-item" id="email-link" href="mailto:help.turantbuy@gmail.com">
             <div class="contact-icon ci-blue">📧</div>
             <div class="contact-info">
                 <div class="contact-title">Email</div>
-                <div class="contact-sub" id="email-sub">support@bnzara.com · Reply within 24 hours</div>
+                <div class="contact-sub" id="email-sub">help.turantbuy@gmail.com · Reply within 24 hours</div>
             </div>
             <span class="arrow">›</span>
         </a>
-        <a class="contact-item" id="whatsapp-link" href="https://wa.me/919876543210">
+        <a class="contact-item" id="whatsapp-link" href="https://wa.me/918890484141">
             <div class="contact-icon ci-green">💬</div>
             <div class="contact-info">
                 <div class="contact-title">WhatsApp</div>
-                <div class="contact-sub" id="whatsapp-sub">+91 98765 43210 · Mon–Sat, 9AM–9PM</div>
+                <div class="contact-sub" id="whatsapp-sub">+91 88904 84141 · Mon–Sat, 9AM–9PM</div>
             </div>
             <span class="arrow">›</span>
         </a>
-        <a class="contact-item" id="call-link" href="tel:+919876543210">
+        <a class="contact-item" id="call-link" href="tel:+918890484141">
             <div class="contact-icon ci-yellow">📞</div>
             <div class="contact-info">
                 <div class="contact-title">Call</div>
-                <div class="contact-sub" id="call-sub">+91 98765 43210 · Mon–Sat, 9AM–9PM</div>
+                <div class="contact-sub" id="call-sub">+91 88904 84141 · Mon–Sat, 9AM–9PM</div>
             </div>
             <span class="arrow">›</span>
         </a>
@@ -97,7 +97,7 @@
         </ul>
     </div>
 </main>
-<footer>© 2026 TurantBuy. All rights reserved. · <a href="mailto:support@bnzara.com">support@bnzara.com</a></footer>
+<footer>© 2026 TurantBuy. All rights reserved. · <a href="mailto:help.turantbuy@gmail.com">help.turantbuy@gmail.com</a></footer>
 <script>
     // ⚠️ Manager ki photo ke liye inline SVG.
     //
@@ -112,16 +112,20 @@
     // bhejti hai. Lookup se pehle neeche toLowerCase() lagta hai, isliye
     // yahan ki keys chhoti honi chahiye — warna store match hi nahi karega
     // aur har store par pehla wala manager dikhega.
+    //
+    // ⚠️ store2 / store3 abhi NAKLI data hain — naam, number aur pata sab
+    // placeholder. Naya store chaalu karne se PEHLE inhe asli value se
+    // bharna zaroori hai, warna customer galat number par phone karega.
     const storeContacts = {
         'harjanpura01': {
             storeName: 'Harjanpura Store',
-            address: 'Harjanpura, Jaipur, Rajasthan',
+            address: 'Harjanpura, Teh. Neem Ka Thana, Dist. Sikar, Rajasthan',
             manager: {
-                name: 'Rajesh Kumar',
-                phone: '+91-9876-543-210',
-                phoneClean: '919876543210',
-                email: 'harjanpura01@bnzara.com',
-                whatsapp: '919876543210',
+                name: 'Store Manager',
+                phone: '+91 88904 84141',
+                phoneClean: '918890484141',
+                email: 'help.turantbuy@gmail.com',
+                whatsapp: '918890484141',
                 profileImage: AVATAR
             }
         },
@@ -130,10 +134,10 @@
             address: 'Store 2 Address, City',
             manager: {
                 name: 'Manager Name 2',
-                phone: '+91-9876-543-211',
-                phoneClean: '919876543211',
-                email: 'store2@bnzara.com',
-                whatsapp: '919876543211',
+                phone: '+91 88904 84141',
+                phoneClean: '918890484141',
+                email: 'help.turantbuy@gmail.com',
+                whatsapp: '918890484141',
                 profileImage: AVATAR
             }
         },
@@ -142,46 +146,38 @@
             address: 'Store 3 Address, City',
             manager: {
                 name: 'Manager Name 3',
-                phone: '+91-9876-543-212',
-                phoneClean: '919876543212',
-                email: 'store3@bnzara.com',
-                whatsapp: '919876543212',
+                phone: '+91 88904 84141',
+                phoneClean: '918890484141',
+                email: 'help.turantbuy@gmail.com',
+                whatsapp: '918890484141',
                 profileImage: AVATAR
             }
         }
     };
-
     function getStoreId() {
         const params = new URLSearchParams(window.location.search);
         // ⚠️ toLowerCase — dekho upar wala comment
         return (params.get('store') || 'harjanpura01').trim().toLowerCase();
     }
-
     function updateStoreInfo() {
         const storeId = getStoreId();
         const storeData = storeContacts[storeId] || storeContacts['harjanpura01'];
         const manager = storeData.manager;
-
         document.getElementById('manager-name').textContent = manager.name;
         document.getElementById('manager-image').src = manager.profileImage;
         document.getElementById('manager-address').textContent = storeData.address;
-
         // ⚠️ tel: aur wa.me ke liye SAAF number chahiye — dashes wala nahi.
         // Pehle yahan manager.phone (dashes ke saath) jaata tha, jisse kuch
         // phone dialer link nahi kholte the.
         document.getElementById('manager-call').href = `tel:+${manager.phoneClean}`;
         document.getElementById('manager-whatsapp').href = `https://wa.me/${manager.whatsapp}`;
-
         document.getElementById('email-link').href = `mailto:${manager.email}`;
         document.getElementById('email-sub').textContent = `${manager.email} · Reply within 24 hours`;
-
         document.getElementById('whatsapp-link').href = `https://wa.me/${manager.whatsapp}`;
         document.getElementById('whatsapp-sub').textContent = `${manager.phone} · Mon–Sat, 9AM–9PM`;
-
         document.getElementById('call-link').href = `tel:+${manager.phoneClean}`;
         document.getElementById('call-sub').textContent = `${manager.phone} · Mon–Sat, 9AM–9PM`;
     }
-
     updateStoreInfo();
 </script>
 </body>
